@@ -1,0 +1,19 @@
+<div class="carousel">
+  <div class="card-wrapper" id="card-wrapper">
+    <div class="card" *ngFor="let products of products">
+      <figure>
+        <img id="fg" [src]="products.image" />
+      </figure>
+      <div class="card-body">
+        <span class="title">
+          {{ products.title }}
+        </span>
+        <span class="price">
+          {{ products.price | currency }}
+        </span>
+      </div>
+    </div>
+  </div>
+  <button class="prev" (click)="prevProducts()"><</button>
+  <button class="next" (click)="nextProducts()">></button>
+</div>
